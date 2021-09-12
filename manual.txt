@@ -1,0 +1,22 @@
+things to remeber 
+1. how clear is used.
+2. how float is used.
+3. how padding is given is the main box to support navbar and its content
+4. how he used active class and active in the rel stylesheet
+5. hwo he used th ecopyright sign
+6. how he used field set and legend which is useful for making sign in form slike google
+7. "#" id used to display the same page while clicking on a link. 
+8. #nav{
+    height: 40px;
+    background-color: #666
+}
+#nav ul{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#nav li{
+    font-weight: bold;         this is on how to make a navbar
+    list-style: none;
+    float:left;
+    padding-right: 20px;
+}
