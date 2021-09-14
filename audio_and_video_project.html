@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio & video</title>
+    <link rel="stylesheet" href="project1/style.css">
+</head>
+<body>
+    <h1>Video</h1>
+    <video id="my video" src="http://v2v.cc/~j/theora_testsuite/320x240.ogg" controls  loop>
+    YOUR BROWSER DOES NOT SUPPORT VIDEO</video>
+        <!-- control:- gives you control.
+        autoplay :- for autoplay instructoin.
+        loop:- in loop ... the line after vidoe tag is used if the vidoe is not available. -->
+        <h2>audio</h2>
+        <audio id="myaudio" src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" > 
+        your browser does not support audio</audio>
+        <button onclick="document.getElementById('myaudio').play()">Play</button>
+        <button onclick="document.getElementById('myaudio').volume+=0.1">volume++</button>
+        <button onclick="document.getElementById('myaudio').pause()">Pause</button>
+        <button onclick="document.getElementById('myaudio').volume-=0.1">volume--</button>
+</body>
+<script>
+    // var v= document.getElementById('my video');
+    // v.play();
+    // we can use it to v.play through JS when script runs.
+
+</script>
+</html>
