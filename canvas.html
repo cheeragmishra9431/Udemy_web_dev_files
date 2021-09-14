@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycanvas{
+            border: 2px solid #000;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas" width="300" height="300"></canvas>
+
+</body>
+<script>
+    var c=document.getElementById('mycanvas');
+    var ctx= c.getContext('2d');
+    // ctx.fillStyle='red';
+    // ctx.fillRect(75,75,150,150);
+
+    // ctx.moveTo(0,0)
+    // ctx.lineTo(250,150);
+    // ctx.stroke(); 
+
+    // ctx.beginPath();
+    // ctx.arc(150,150,60,0,2*Math.PI);
+    // ctx.fillStyle='green';
+    // ctx.fill();
+    // ctx.lineWidth=4;
+    // ctx.strokeStyle='red';
+    // ctx.stroke();
+
+    // ctx.font=' 50px Arial';
+    // ctx.strokeStyle='red';
+    // ctx.strokeText('hello', 20, 150);
+
+    grd=ctx.createLinearGradient(0,0,100,0);
+    grd.addColorStop(0, 'blue');
+    grd.addColorStop(1,'red');
+    ctx.fillStyle=grd;
+    ctx.fillRect(10,10,150,150);
+</script>
+</html>
