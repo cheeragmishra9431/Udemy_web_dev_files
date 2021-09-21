@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+    <div id="result"></div>
+</body>
+<script>
+    //store an item
+    localStorage.setItem('name','john deo');
+    var x=localStorage.getItem('name'); // one way
+    // localStorage.removeItem('name');
+    console.log(localStorage.name); // second way
+    console.log(x);
+    if(localStorage.name){
+
+        document.getElementById("name").innerHTML=x;
+    }
+    else{
+        
+        document.getElementById("name").innerHTML="no name found";
+    }
+    sessionStorage.setItem('clickcount');
+    if (sessionStorage.clickcount) {
+        sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+        } 
+    else {
+        sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " +
+        sessionStorage.clickcount + " time(s) in this session.";
+</script>
+</html>
