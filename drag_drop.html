@@ -12,6 +12,12 @@
             padding: 10px;
             border: 1px solid #ccc
         }
+        #box1{
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc
+        }
     </style>
     <script>
         function allowDrop(ev){
@@ -29,9 +35,11 @@
 </head>
 <body>
     <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="box1" ondrop="drop(event)" ondragover="allowDrop(event)">
 
     </div>
     <img id="drag1" src="logo.png" draggable="true" ondragstart="drag(event)" width="291" height="145">
     <h1 contenteditable="true">this text can be edited</h1>
+    </div>
 </body>
 </html>
