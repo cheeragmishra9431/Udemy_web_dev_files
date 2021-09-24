@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       #box1{
+           height: 100px;
+           width: 100px;
+           background-color: lightblue;
+           transition: background-color 4s, width  4s;
+           transition-delay: .2s;
+           transition-timing-function: ease-out;
+           display: none;
+       }
+       #box1:hover{
+        background-color: lightcoral;
+        width: 400px;
+       }
+       #box2{
+           height: 100px;
+           margin:auto;
+           margin-top:20vmax;
+           width: 100px;
+           background-color: lightblue;
+           animation-name: clp;
+           animation-duration: 1.5s;
+           /* animation-fill-mode: forwards; */
+           animation-iteration-count: infinite;
+
+       }
+       /* @keyframes clp{
+           from{
+               background-color: lightgray;
+           }
+           to{
+               background-color: lightsalmon;
+           }
+       } */
+       @keyframes clp{
+           0%{background-color: rgb(218, 171, 152);}
+           25%{background-color: rgb(44, 20, 11);}
+           50%{background-color: rgb(27, 26, 99);}
+           75%{background-color: rgba(119, 138, 37, 0.808);}
+           75%{background-color: lightsalmon;}
+       }
+       @keyframes clp{
+           0%{box-shadow: 10px 10px 5px grey;}
+           25%{box-shadow:10px -10px 5px grey}
+           50%{box-shadow:-10px -10px 5px grey}
+           75%{box-shadow:-10px 10px 5px grey}
+           100%{box-shadow:10px 10px 5px grey}
+           
+       }
+   </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>
