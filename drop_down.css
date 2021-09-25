@@ -9,5 +9,74 @@ body{
     list-style:none;
 }
 .menu ul li{
-    background
+    background:#f4f4f4;
+    border: 1px solid #b7b7b7;
+    display:block;
+    float:left;
+    font: bold 12px arial;
+    height:40px;
+    line-height: 40px;
+    overflow:hidden;
+    padding-left:15px;
+    position:absolute;
+    width:135px;
+    z-index: 100000;
+    box-shadow:0px 3px 5px grey;
+    background :linear-gradient(top, white 0%, grey 50%,#e1e1e1 5%, #f6f6f6 100%);
+}
+.menu ul li:hover{
+    background :linear-gradient(top, rgb(163, 85, 85) 0%, rgb(172, 27, 27) 50%,#2c1c1c 5%, #f6f6f6 100%);
+}
+.menu ul li:first-chiild{
+    border-radius: 4px 0 0 4px;
+}
+.menu ul li:last-chiild{
+    border-radius: 0px 4px 4px 0px;
+}
+.menu ul li#b{
+    margin-left: 150px;
+}
+.menu ul li#c{
+    margin-left: 300px;
+}
+.menu ul li a{
+    display:block;
+    text-decoration: none;
+    color: aqua;
+}
+.menu ul li div{
+    text-align: left;
+    font: normal 11px arial;
+    line-height :19px;
+    margin: 10px 0px;
+}
+.menu ul li div a{
+    display: inline;
+}
+.menu ul li div a:hover{
+    text-decoration: underline;
+}
+.menu ul li div hr{
+    border:none;
+    border-top:1px dotted #a0a0a0;
+    margin: 5px 0;
+    width: 95%;
+}
+.menu ul li:hover:target{
+    display:inherit;
+    padding:0;
+    height: 155px;
+    width:200px;
+    padding-left: 15px;
+    opacity:.97;
+    transition:height 0.4s ease-in;
+}
+.menu ul li#a:hover:target{
+    background: #f0f9ff;
+}
+.menu ul li#b:hover:target{
+    background: #f0f9ff;
+}
+.menu ul li#c:hover:target{
+    background: #f0f9ff;
 }
