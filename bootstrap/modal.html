@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal"> click me</button>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title" id="myModalLabel"> MODAL TITLE</h4>
+                    </div>
+                    <div class="modal-body">
+                        this is modal body
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                        <button class="btn btn-primary">save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-bs-toggle="dropdown" > dropdown<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">LINK</a></li>
+                <li><a href="#">LINK</a></li>
+                <li><a href="#">LINK</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">LINK</a></li>
+            </ul>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active"> <a href="#tab1" role="tab" data-bs-toggle="tab">HOME</a></li>
+            <li > <a href="#tab2" role="tab" data-bs-toggle="tab">HOME1</a></li>
+            <li > <a href="#tab3" role="tab" data-bs-toggle="tab">HOME2</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel1" class="tab-pane active" id="tab1" >this is tab1</div>
+            <div role="tabpanel2" class="tab-pane " id="tab2" >this is tab2</div>
+            <div role="tabpanel3" class="tab-pane" id="tab3" >this is tab3</div>
+        </div>
+         <br>
+          <button type="button" class="btn btn-default" data-bs-toggle="tooltip" data-placement="left" title="this is a tooltip">clicl me</button>
+    </div>
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+</html>
