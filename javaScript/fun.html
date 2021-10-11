@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="test()">
+    <!-- <button onclick="alert(123)">sdi</button> -->
+    <button onclick=getdate()>todays day</button>
+    <form onsubmit="submitform()">
+        <div>
+            <label >Name</label>
+            <input type="text " id="name" onblur="test()">
+        </div>
+        <div>
+            <label >email</label>
+            <input type="text " id="email">
+        </div>
+        <input type="submit" value="submit">
+    </form>
+    <form id="qwe">
+        <div>
+            <label >Name</label>
+            <input type="text " id="name">
+        </div>
+        <div>
+            <label >email</label>
+            <input type="text " id="email">
+        </div>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        // function sayHello(){
+        //     alert("hello");
+        // }
+        // sayHello();
+        // function sayhello(greet){
+        //     alert(greet);
+        // }
+        // sayhello("dsiubha");
+        function getdate(){
+            var d= new Date();
+            alert(d.getDay());
+        }
+        function submitform(){
+            var name=document.getElementById('name').value;
+            var nameq=document.getElementById('email').value;
+            alert("form submitted"+ name+ nameq);
+        }
+        // getdate();
+        document.getElementById('qwe').addEventListener('submit', submitform);
+        function test(){
+            alert('Blur');
+        }
+    </script>
+</body>
+</html>
