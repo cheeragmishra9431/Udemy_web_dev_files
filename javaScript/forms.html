@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+<body style="background-color: rgba(18, 156, 138, 0.103);">
+    <div class="container">
+        <h1 class="text-center">Register with us</h1>
+        <div id="message" class="alert"></div>
+        <form id="regForm">
+            <div class="form-group">
+                <label >Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+                
+            </div>
+            <div class="form-group">
+                <label >Email</label>
+                <input type="text" class="form-control" id="email" name="email">
+                
+            </div>
+            <div class="form-group">
+                <label >Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+                
+            </div>
+            <div class="form-group">
+                <label >Conform Password</label>
+                <input type="password2" class="form-control" id="password2" name="password2">
+                
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <script>
+                function register(e){
+                    e.preventDefault();
+                    var name=document.getElementById('name').value;
+                    var email=document.getElementById('email').value;
+                    var password=document.getElementById('password').value;
+                    var password2=document.getElementById('password2').value;
+                    var msg=document.getElementById('message');
+                    if(name==""|| email==""|| password==""|| password2==""){
+                        msg.className="alert alert-danger";
+                        msg.innerHTML=" Please enter all the credentials";
+                    }
+                    else{
+                        if(password==password2){
+                            msg.className="alert alert-success";
+                            msg.innerHTML=name+" is registered with email";
+                            console.log("submitted");
+                        }
+                        else{
+                            msg.className="alert alert-warning";
+                            msg.innerHTML="passwords are not matching";
+                            // console.log("submitted");
+                        }
+                        
+                    }
+                }
+                document.getElementById('regForm').addEventListener('submit', register);
+            </script>
+        </form>
+    </body>
+</div>
+</html>
