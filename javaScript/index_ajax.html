@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="maintext">Change this text</h1> <br>
+    <button onclick="changeText()"> change</button>
+    <script>
+        function changeText(){
+            var xhttp=new XMLHttpRequest();;
+            xhttp.onreadystatechange= function(){
+                if(xhttp.readyState==4 && xhttp.status==200){
+                    console.log(xhttp.responseText);
+                    document.getElementById('maintext').innerHTML=xhttp.responseText;
+                }
+            }
+            xhttp.open('GET', 'file.txt', true);
+            xhttp.send();     
+        }
+
+    </script>
+</body>
+</html>
