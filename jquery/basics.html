@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #square{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <p>This is a paragraph</p>
+    <button id="myBtn">Click</button>
+    <br>
+    <div id="square"></div>
+    <div id="output"></div>
+    <script>
+        $(document).ready(function(){
+            // alert(1);
+            // $('p').hide();
+            // $('#myBtn').click(function(){
+            //     // alert('you clicked');
+            //     // $('p').hide();
+            //     $('p').toggle();
+
+            // });
+            $('#myBtn').dblclick(function(){
+                // alert('you clicked');
+                // $('p').hide();
+                $('p').toggle();
+
+            });
+            $('#square').hover(function(){
+                $(this).text('hovering.....');
+            }, function(){
+                $(this).text('');
+            })
+            $('#square').mouseenter(function(){
+                $(this).text('hovering...');
+                $(this).mouseout(function(){
+                    $(this).text("");
+                })
+            })
+            // you can actually use mousedown and;
+            $('#square').mousemove(function(event){
+                var msg="Mouse position - ";
+                msg+=event.pageX+" "+ event.pageY;
+                $('#output').html("<div>"+ msg+" </div>");
+            })
+        });
+    </script>
+</body>
+</html>
