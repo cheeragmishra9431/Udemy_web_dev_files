@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+            <label>Name:</label><br>
+            <input type="text">
+        </div>
+        <div>
+            <label>Email:</label><br>
+            <input type="text">
+        </div>
+        <div>
+            <label>Location:</label><br>
+            <input type="text" value="newyork">
+        </div>
+        <div>
+            <label>Category:</label><br>
+            <select>
+                <option value="1">Category1</option>
+                <option value="2">Category2</option>
+                <option value="3">Category3</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <div id="output"></div>
+    <script>
+        $(document).ready(function(){
+            $('#myForm input').focus(function(){
+                $(this).css("background", 'pink');
+                $(this).blur(function(){
+                    $(this).css('background', 'none');
+                });
+            });
+
+        });
+        $('Myform select').change(function(){
+            var cat='';
+            $('select option:selected').each(function(){
+                cat+=$(this).text()+ " ";
+            });
+            $('output').text(cat);
+        });
+        $(':input').select(function(){
+            $('#output').text('something was selected').show().fadeOut(1000);
+        })
+        $('#myForm').submit(function(e){
+            e.preventDefault();
+            $('#output').text('Form Submitted')
+        })
+        $('#myForm input').keydown(function(){
+            $('#output').text('you are typing');
+            $(this).keyup(function(){
+                $('#output').text(" ");
+            });
+        })
+    </script>
+</body>
+</html>
