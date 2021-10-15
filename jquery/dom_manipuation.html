@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2" class="dd"></div>
+    <input type="text" id="i1">
+    <ul id="list1">
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <button id="myBtn">click</button>
+   <script>
+       $(document).ready(function(){
+            $('#d1').text('hello world');
+            $('#d2').html('<h1>hello world</h1>');
+            $('#i1').val('hello world');
+            // alert($('#i1').text());
+            $('#d1').attr('class', 'something');
+            $('#d1').removeAttr('class');
+            $('#list1').append('<li>last item</li>');
+            $('#list1').prepend('<li>first item</li>');
+            $('#list1').before('<h1>before item</h1>');
+            $('#list1').after('<h1>after item</h1>');
+            // $('#list1').remove();
+            // $('#list1').empty();
+            $('#d1').addClass('red');
+            $('#d2').addClass('green');
+            // $('#d2').removeClass('green');
+            $('#myBtn').click(function(){
+                $('#d2').toggleClass('green');
+            });
+            $('#d1').css('background','pink');
+            $('#d1').width('150');
+            $('#d1').height('150');
+            // $('#d2').replaceWith('<h2> replaced with </h2>');
+            $('li').unwrap();
+            $('#d2').wrap('<div></div>')
+
+       })
+   </script>
+</body>
+</html>
