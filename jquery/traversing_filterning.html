@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .container *{
+            display: block;
+            border: 2px solid grey;
+            color: grey;
+            padding: 5px;
+            margin:  15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div> div[great-grandparent]
+            <ul> ul[grandparent]
+                <li>li [parent]
+                    <span>span</span>
+
+                </li>
+
+            </ul>
+        </div>
+        <div> div[grand parent]
+            <p> p [parent]
+                <span>span</span>
+            </p>
+        </div>
+        <div>div[parent]
+            <p>p</p>
+            <span>span</span>
+            <h2>h2</h2>
+            <h3>h3</h3>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            // $('span').parent().css({'color': 'red', 'border': '2px solid red'});
+            // $('span').parents().css({'color': 'red', 'border': '2px solid red'});  //parents will applied to all parents
+            // $('span').parents('ul').css({'color': 'red', 'border': '2px solid red'});  // only ul parents
+            // $('span').parentsUntil('div').css({'color': 'red', 'border': '2px solid red'});  // untill div
+            // $('div').children().css({'color': 'red', 'border': '2px solid red'});  //children
+            // $('div').find('p').css({'color': 'red', 'border': '2px solid red'});  //children
+            // $('h2').siblings().css({'color': 'red', 'border': '2px solid red'});  //children
+            
+            $('h2').next().css({'color': 'red', 'border': '2px solid red'});  //children
+            // next all is even there
+            // next untill
+            //first and last
+
+
+          
+        })
+    </script>
+</body>
+</html>
