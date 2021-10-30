@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .square, .square2{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+    <button id="btnHide">hide</button>
+    <button id="btnShow">show</button>
+    <button id="btnFadein">Fade in</button>
+    <button id="btnFadeout">Fade out</button>
+    <button id="btnFadeTog"> Fade toggle</button>
+    <button id="btnSlideup"> Slide up</button>
+    <button id="btnSlidedown"> slide down</button>
+    <button id="btnSlidetog"> slide toggle</button>
+    <p class="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum dolor culpa ipsa cum laboriosam cupiditate repellendus reiciendis iste corporis nostrum illo nam reprehenderit dolorem id similique, nisi sapiente. Velit.
+
+    </p>
+    <br>
+    <button id="anim">animate</button>
+    <br>
+    <div class="square"></div>
+    <br>
+    <button id="anim2">animate</button>
+    <br>
+    <div class="square2"></div>
+    <script>
+        $(document).ready(function(){
+            $('#btnHide').click(function(){
+                $('.p1').hide();
+            });
+            $('#btnShow').click(function(){
+                $('.p1').show();
+            });
+            $('#btnShow').click(function(){
+                $('.p1').toggle();
+            });
+            $('#btnFadein').click(function(){
+                $('.p1').fadeIn();
+            });
+            $('#btnFadeout').click(function(){
+                $('.p1').fadeOut();
+                // $('.p1').fadeOut(4000);//miliseconds
+            });
+            $('#btnFadeTog').click(function(){
+                $('.p1').fadeToggle();
+            });
+            $('#btnSlideup').click(function(){
+                $('.p1').slideUp();
+            });
+            $('#btnSlidedown').click(function(){
+                $('.p1').slideDown();
+            });
+            $('#btnSlidetog').click(function(){
+                $('.p1').slideToggle();
+            });
+            // you can use stop even to stop between slide toggling
+            $('#anim').click(function(){
+                $('.square').animate({
+                    left:'+=150px',
+                    opacity: '0.5',
+                    height:'+=200px',
+                    width:'+=200px'
+
+
+                }, fast);
+            })
+            $('#anim2').click(function(){
+                var div=$('.square2');
+                div.animate({height:'400px', opacity:'0.4'},'slow');
+                div.animate({width:'400px', opacity:'0.8'},'slow');
+                div.animate({height:'100px', opacity:'0.4'},'slow');
+                div.animate({width:'100px', opacity:'0.8'},'slow');
+            })
+            
+            
+        })
+    </script>
+</body>
+</html>
