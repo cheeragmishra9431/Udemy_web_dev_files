@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle.all.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            coffee tech
+        </h1>
+        <div class="slider">
+            <img src="img/slide1.jpg" width="640" height="426">
+            <img src="img/slide2.jpg" width="640" height="426">
+            <img src="img/slide3.jpg" width="640" height="426">
+            <img src="img/slide4.jpg" width="640" height="426">
+            <img src="img/slide5.jpg" width="640" height="426">
+        </div>
+        <ul id="nav">
+            <li id="prev"><a href="#">previous</a></li>
+            <li id="next"><a href="#">next</a></li>
+
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.slider').cycle({
+                fx:"fade", pause: 1, prev:'#prev', next:'#next'
+            });
+        })
+    </script>
+</body>
+</html>
