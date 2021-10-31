@@ -1,9 +1,9 @@
 var http= require('http');
 var fs= require("fs");
-const { ESRCH } = require('constants');
+
 var host= '127.0.0.1';
-var port= '3000';
-fs.readFile('./index.html', function(err, html){
+var port= 3000;
+fs.readFile('index.html', function(err, html){
     if(err){
         console.log("err");
         return;
@@ -16,6 +16,6 @@ fs.readFile('./index.html', function(err, html){
         res.end();
     });
     server.listen(port, host, function(){
-        console.log("server runnin on port "+ port);
+        console.log(`Server running at http://${hostname}:${port}/`);
     });
 })
