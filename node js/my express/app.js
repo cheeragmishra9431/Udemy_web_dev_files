@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 app.get('/', function(req, res){
     res.send("hello world")
 });
+app.get('/about', function(req, res){
+    res.send("hello world about")
+});
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.listen(port);
